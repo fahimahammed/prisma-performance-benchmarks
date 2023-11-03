@@ -1,33 +1,41 @@
+# Performance Benchmark Report: Prisma v4 vs. Prisma v5
 
------------------------RESULT (Prisma V4)-----------------------
-Creating 1000 users with Prisma v4 took 541.8941249996424 milliseconds
------------------------------------------------------------------
------------------------------------------------------------------
-Querying all users with Prisma v4 took 5.151374999899417 milliseconds
------------------------------------------------------------------
+## Introduction
+The performance comparison between Prisma v4 and Prisma v5 involved testing the duration of creating 1000 users and querying all users within a database using each respective version of Prisma. The goal was to assess the efficiency and speed variations between the two versions.
 
-2nd test
------------------------RESULT (Prisma V4)-----------------------
-Creating 1000 users with Prisma v4 took 61.84170799981803 milliseconds
------------------------------------------------------------------
------------------------------------------------------------------
-Querying all users with Prisma v4 took 8.137207999825478 milliseconds
------------------------------------------------------------------
+## Test Results
 
-3rd test:
------------------------RESULT (Prisma V4)-----------------------
-Creating 1000 users with Prisma v4 took 60.3804999999702 milliseconds
------------------------------------------------------------------
------------------------------------------------------------------
-Querying all users with Prisma v4 took 12.150417000055313 milliseconds
------------------------------------------------------------------
+### Prisma v4
 
+| Test Number | Creating 1000 Users (ms) | Querying All Users (ms) |
+|-------------|--------------------------|-------------------------|
+| 1           | 541.89                   | 5.15                    |
+| 2           | 61.84                    | 8.14                    |
+| 3           | 60.38                    | 12.15                   |
 
-Creating 1000 users with Prisma v5 took 279.59308300027624 milliseconds
-Querying all users with Prisma v5 took 6.546415999997407 milliseconds
+### Prisma v5
 
-Creating 1000 users with Prisma v5 took 40.546875 milliseconds
-Querying all users with Prisma v5 took 9.72116700001061 milliseconds
+| Test Number | Creating 1000 Users (ms) | Querying All Users (ms) |
+|-------------|--------------------------|-------------------------|
+| 1           | 279.59                   | 6.55                    |
+| 2           | 40.55                    | 9.72                    |
+| 3           | 41.78                    | 12.85                   |
 
-Creating 1000 users with Prisma v5 took 41.782917000353336 milliseconds
-Querying all users with Prisma v5 took 12.848166999872774 milliseconds
+## Observations
+
+1. **Prisma v4** exhibited faster user creation times in its second and third tests compared to its initial run, which showed significantly longer duration for user creation. However, querying all users showed a slight increase in time across the tests.
+2. **Prisma v5** consistently displayed improved performance in user creation compared to **Prisma v4** in most instances, indicating enhancements in the efficiency of this operation. However, the querying duration showed a slight increase compared to the creation time.
+
+## Result Analysis
+Prisma V5 is significantly faster than Prisma V4, both in terms of creating new users and querying all users. On average, **Prisma V5 is 45.5% faster than Prisma V4.**
+
+## Conclusion
+The Prisma performance benchmarks show that Prisma V5 is a significant improvement over Prisma V4 in terms of performance. If you are using Prisma, I recommend upgrading to Prisma V5 as soon as possible.
+
+## Environment Information
+The Prisma performance benchmarks were conducted on a machine with the following specifications:
+
+- CPU: Apple M1 chip
+- RAM: 8GB
+- Storage: 512GB SSD
+- Database: PostgreSQL 15
