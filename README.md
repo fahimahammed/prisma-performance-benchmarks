@@ -38,10 +38,15 @@ The Prisma performance benchmarks show that Prisma V5 is a significant improveme
 ## Environment Information
 The Prisma performance benchmarks were conducted on a machine with the following specifications:
 
-- CPU: Apple M1 chip
-- RAM: 8GB
+- Chip  
+  - Apple M1 chip
+    - 8-core CPU with 4 perform­ance cores and 4 efficiency cores
+    - 7-core GPU, 8-core GPU
+    - 16-core Neural Engine
+- RAM: 8GB unified memory
 - Storage: 512GB SSD
 - Database: PostgreSQL 15
+- Operating System: macOS
 
 *The recorded performance metrics may vary due to factors like system configuration, internet speed, workload, database size, caching, and software versions.*
 
